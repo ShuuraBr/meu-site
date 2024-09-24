@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transportadora especializada em rastreamento em tempo real e segurança de mercadorias.">
+    <title>BAWE Transportes – Segurança e Tecnologia em Movimento</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones do FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cores */
+        :root {
+            --primary-color: #005b96; /* Azul Oceano */
+            --secondary-color: #f4f4f4; /* Branco Suave */
+            --dark-color: #222;         /* Cinza Escuro */
+            --light-color: #fff;        /* Branco */
+            --accent-color: #777;       /* Cinza Médio */
+        }
+
+        /* Estilos do cabeçalho e navegação */
+        .hero {
+            background: url('background-image.jpg') no-repeat center center/cover;
+            background-color: var(--dark-color);
+            height: 100vh;
+            color: var(--light-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            background-color: var(--dark-color);
+        }
+
+        .logo img {
+            height: 50px; /* Ajuste a altura conforme necessário */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero-content h2 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .hero-content p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #004a7a;
+        }
+
+        /* Estilos das seções */
+        .section {
+            padding: 60px 20px;
+            background-color: var(--secondary-color);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: var(--dark-color);
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .features, .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature, .service-card {
+            background-color: var(--light-color);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 15px;
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover, .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature i, .service-card i {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3, .feature h3 {
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-card p, .feature p {
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        .testimonials {
+            background-color: var(--accent-color);
+            padding: 40px 20px;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background-color: var(--light-color);
+            padding: 20px;
+            margin: 15px;
+            border-left: 5px solid var(--primary-color);
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial footer {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .contact-form {
+            background-color: var(--light-color);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid var(--accent-color);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #004a7a;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .creators {
+            margin-top: 10px;
+            color: var(--accent-color);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .features, .service-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial-slider {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="BAWE Transportes Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services" onclick="showServices()">Serviços</a></li>
+                <li><a href="#tracking">Rastreamento</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#contact" onclick="openWhatsApp()">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h2>Segurança e Tecnologia em Movimento</h2>
+            <p>Rastreamento em tempo real e segurança avançada para sua mercadoria.</p>
+            <a href="#contact" class="cta-btn" onclick="openWhatsApp()">Entre em Contato</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Seção "Por que escolher a BAWE?" -->
+        <section class="section" id="services">
+            <h2>Por Que Escolher a BAWE?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Rastreamento em Tempo Real</h3>
+                    <p>Acompanhe sua carga em cada etapa da jornada.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>Segurança Garantida</h3>
+                    <p>Monitoramento 24/7 e equipe especializada.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>Equipe Profissional</h3>
+                    <p>Serviço de excelência em todos os níveis.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <h3>Cobertura Nacional</h3>
+                    <p>Estamos em todo o Brasil para atender suas necessidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section class="section testimonials" id="testimonials">
+            <h2>O Que Nossos Clientes Dizem</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"A BAWE transformou a maneira como gerenciamos nossas entregas. O rastreamento em tempo real é incrível!"</p>
+                    <footer>- João da Silva</footer>
+                </div>
+                <div class="testimonial">
+                    <p>"Sinto-me seguro com a BAWE. Eles cuidam da minha carga como se fosse deles!"</p>
+                    <footer>- Maria Oliveira</footer>
+                </div>
+                <div class="testimonial">
+                    <p>"Excelentes profissionais! Sempre disponíveis para tirar dúvidas e ajudar."</p>
+                    <footer>- Carlos Mendes</footer>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="section" id="contact">
+            <h2>Entre em Contato</h2>
+            <div class="contact-form">
+                <p>Você pode entrar em contato conosco através do WhatsApp!</p>
+                <button onclick="openWhatsApp()">Fale Conosco pelo WhatsApp</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BAWE Transportes. Todos os direitos reservados.</p>
+        <p class="creators">Desenvolvido por Sua Empresa.</p>
+    </footer>
+
+    <script>
+        function openWhatsApp() {
+            window.open('https://wa.me/5561992291746', '_blank'); // Substitua pelo número de WhatsApp desejado
+        }
+
+        function showServices() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
